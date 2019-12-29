@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2019 at 09:04 AM
+-- Generation Time: Dec 29, 2019 at 09:20 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -54,16 +54,18 @@ CREATE TABLE `task` (
   `tname` varchar(200) DEFAULT NULL,
   `detail` text,
   `label` tinyint(1) DEFAULT NULL,
-  `deadline` date DEFAULT NULL
+  `deadline` date DEFAULT NULL,
+  `done` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `task`
 --
 
-INSERT INTO `task` (`taskid`, `username`, `tname`, `detail`, `label`, `deadline`) VALUES
-(1, 'rdoshi29', 'task scheduler', 'no description', 0, '2019-12-25'),
-(2, 'rdoshi29', 'task scheduler', 'whyyyyy', 0, '2019-12-27');
+INSERT INTO `task` (`taskid`, `username`, `tname`, `detail`, `label`, `deadline`, `done`) VALUES
+(21, 'rdoshi29', 'task scheduler', '', 1, '2020-01-01', 0),
+(23, 'rdoshi29', 'taheduler', 'rbtrgbet', 4, '2020-01-05', 1),
+(24, 'rdoshi29', 'si songs', 'fbgvdfb', 2, '2020-01-01', 0);
 
 --
 -- Indexes for dumped tables
@@ -91,7 +93,7 @@ ALTER TABLE `task`
 -- AUTO_INCREMENT for table `task`
 --
 ALTER TABLE `task`
-  MODIFY `taskid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `taskid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
